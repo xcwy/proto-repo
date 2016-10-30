@@ -4,11 +4,14 @@ task copyJar(type: Copy){
     //新建文件夹
     def path = './' + project.ext.version
     def dir = new File(path)
-    if (!dir.exists()){
-        dir.mkdir()
-    }
+    print "delete dir if exit"
+    dir.deleteOnExit()
+    print "make a new dir"
+    dir.mkdir()
+
 
     //copy build/libs/ 下面的jar到 新的文件夹中
+    print "copy jar to dir"
     def fileName = './build/libs/'
     from(file(fileName))
     into(dir)
