@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package io.reactivesw.catalog.infrastructure;
+
+option java_package = "io.reactivesw.catalog.grpc";
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+message Empty {}
+
+message LongValue {
+    // The int64 value.
+    int64 value = 1;
+}
+
+message IntValue {
+    // The int32 value.
+    int32 value = 1;
+}

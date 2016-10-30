@@ -1,0 +1,37 @@
+group 'io.rai'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath('com.google.protobuf:protobuf-gradle-plugin:0.8.0')
+    }
+}
+
+// init repository, java, wrapper
+apply from: 'application_build/init_build.gradle'
+
+// grpc build script
+apply from: 'application_build/grpc_build.gradle'
+
+// application build script
+apply from: 'application_build/application_build.gradle'
+
+apply from: 'application_build/copy.gradle'
+
+// used by build and docker
+jar {
+    baseName = project.ext.baseName
+    version = project.ext.version
+}

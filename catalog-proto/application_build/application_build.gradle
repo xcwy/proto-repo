@@ -1,0 +1,7 @@
+// for spring boot
+//apply plugin: 'spring-boot'
+
+dependencies {
+    compile('io.grpc:grpc-stub:1.0.0')
+    compile('io.grpc:grpc-protobuf:1.0.0')
+}

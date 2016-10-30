@@ -1,0 +1,15 @@
+apply from: 'application_build/version.gradle'
+
+task copyJar(type: Copy){
+    //新建文件夹
+    def path = './' + project.ext.version
+    def dir = new File(path)
+    if (!dir.exists()){
+        dir.mkdir()
+    }
+
+    //copy build/libs/ 下面的jar到 新的文件夹中
+    def fileName = './build/libs/'
+    from(file(fileName))
+    into(dir)
+}

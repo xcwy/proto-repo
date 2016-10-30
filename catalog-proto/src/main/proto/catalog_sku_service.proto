@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package io.reactivesw.catalog.infrastructure;
+
+option java_multiple_files = true;
+option java_package = "io.reactivesw.catalog.grpc";
+import "catalog_sku_message.proto";
+import "catalog_data_message.proto";
+
+/**
+ * sku rpc services.
+ */
+service SkuService {
+    //query sku inventory by sku id.
+    rpc querySkuInventory (LongValue) returns (IntValue);
+
+    //query sku simple information.
+    rpc querySkuSimpleInformation (LongValue) returns (SkuInformation);
+
+    //query list sku information.
+    rpc querySkuInformationList (SkuIdList) returns (SkuInformationList);
+}
