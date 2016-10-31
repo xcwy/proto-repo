@@ -1,18 +1,16 @@
 apply from: 'application_build/version.gradle'
 
-task copyJar(type: Copy){
-    //新建文件夹
-    def path = './' + project.ext.version
-    def dir = new File(path)
-    print "delete dir if exit"
-    dir.deleteOnExit()
-    print "make a new dir"
-    dir.mkdir()
+task copyJar(type: Copy) {
+    def rootPath = "$rootDir"
+    println(rootPath)
 
+    def path = rootPath + "/" + "$project.ext.groupId".replace(".", "/") + "/" +
+            "$project.ext.baseName" + "/" + "$project.ext.version"
+    println(path)
 
-    //copy build/libs/ 下面的jar到 新的文件夹中
-    print "copy jar to dir"
-    def fileName = './build/libs/'
-    from(file(fileName))
-    into(dir)
+    def srcPath = "$buildDir" + "/" + "libs"
+
+    from srcPath
+    into path
+    include '**/*.java'
 }

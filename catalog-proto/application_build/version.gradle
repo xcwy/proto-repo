@@ -1,2 +1,3 @@
+project.ext.groupId='io.reactivesw'
 project.ext.baseName='catalog-proto'
 project.ext.version='0.0.3'

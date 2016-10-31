@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/catalog-proto.iml" filepath="$PROJECT_DIR$/.idea/modules/catalog-proto.iml" group="catalog-proto" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/catalog-proto_main.iml" filepath="$PROJECT_DIR$/.idea/modules/catalog-proto_main.iml" group="catalog-proto" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/catalog-proto_test.iml" filepath="$PROJECT_DIR$/.idea/modules/catalog-proto_test.iml" group="catalog-proto" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/853416857/proto-repo.iml" filepath="$PROJECT_DIR$/.idea/modules/853416857/proto-repo.iml" />
+    </modules>
+  </component>
+</project>
