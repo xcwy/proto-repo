@@ -2,15 +2,13 @@ apply from: 'application_build/version.gradle'
 
 task copyJar(type: Copy) {
     def rootPath = "$rootDir"
-    println(rootPath)
 
     def path = rootPath + "/" + "$project.ext.groupId".replace(".", "/") + "/" +
             "$project.ext.baseName" + "/" + "$project.ext.version"
-    println(path)
 
     def srcPath = "$buildDir" + "/" + "libs"
 
     from srcPath
     into path
-    include '**/*.java'
+    include '**/*.jar'
 }

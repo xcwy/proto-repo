@@ -17,3 +17,7 @@ message IntValue {
     // The int32 value.
     int32 value = 1;
 }
+
+message StringValue{
+    string value = 1;
+}
